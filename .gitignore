@@ -309,3 +309,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/vim,osx,rust,linux,emacs,windows,eclipse,intellij
+
+.idea/
+
+**/target
+/projects/hello_world/main
