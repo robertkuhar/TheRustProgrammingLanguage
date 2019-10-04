@@ -16,10 +16,13 @@ fn main() {
         // Oh, ooh.  Some sort of String interpolation here
         println!("Your guess: {}", guess);
 
-        let guess: u32 = guess
-            .trim()
-            .parse()
-            .expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("\"{}\" is not a number!  Try again.", guess.trim());
+                continue;
+            }
+        };
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
@@ -27,7 +30,7 @@ fn main() {
             Ordering::Equal => {
                 println!("You win!");
                 break;
-            },
+            }
         }
     }
 }
