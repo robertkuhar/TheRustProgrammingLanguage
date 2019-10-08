@@ -10,7 +10,7 @@ https://doc.rust-lang.org/book/
 |--------|---------------------------------------------------------------------|-------|-----------|
 | Oct 09 | CH01:  Getting Started                                              | 10    | BobK      |
 |        | CH02:  Programming a Guessing Game                                  | 20    |           |
-| Oct 23 | CH03:  Common Programming Concepts                                  | 31    | ?????     |
+| Oct 23 | CH03:  Common Programming Concepts                                  | 31    | Siegfried |
 | Nov 13 | CH04:  Understanding Ownership                                      | 27    | ?????     |
 | Nov 27 |        Thanksgiving                                                 |       |           |
 | Dec 11 | CH05:  Using Structs to Structure Related Data                      | 16    | ?????     |
