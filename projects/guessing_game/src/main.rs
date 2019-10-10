@@ -1,4 +1,4 @@
-use std::io;
+use std::io::stdin;
 use rand::Rng;
 use std::cmp::Ordering;
 
@@ -9,13 +9,15 @@ fn main() {
     loop {
         println!("Please input your guess.");
         // that mut makes guess mutable
+        // Why is it named .expect?
         let mut guess = String::new();
-        io::stdin()
+        stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
         // Oh, ooh.  Some sort of String interpolation here
         println!("Your guess: {}", guess);
 
+        // The group isn't so sure allowing this "shadow definition" here is really a good idea.
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
