@@ -9,7 +9,6 @@ fn main() {
     loop {
         println!("Please input your guess.");
         // that mut makes guess mutable
-        // Why is it named .expect?
         let mut guess = String::new();
         stdin()
             .read_line(&mut guess)
