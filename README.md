@@ -11,9 +11,10 @@ https://doc.rust-lang.org/book/
 | Oct 09 | CH01:  Getting Started                                              | 10    | BobK      |
 |        | CH02:  Programming a Guessing Game                                  | 20    |           |
 | Oct 23 | CH03:  Common Programming Concepts                                  | 31    | Siegfried |
-|        | CH04:  Understanding Ownership                                      | 27    | Beau      |
-| Nov 13 | CH05:  Using Structs to Structure Related Data                      | 16    | ?????     |
-|        | CH06:  Enums and Pattern Matching                                   | 14    |           |
+|        | CH04:  Understanding Ownership to Stack-Only Data: Copy             | 10    | Beau      |
+| Nov 13 | CH04:  Understanding Ownership, Stack-Only Data: Copy               | 17    | Beau      |
+|        | CH05:  Using Structs to Structure Related Data                      | 16    | Beau      |
+|        | CH06:  Enums and Pattern Matching                                   | 14    | Chris     |
 | Nov 27 |        Thanksgiving                                                 |       |           |
 | Dec 11 | CH07:  Managing Growing Projects with Packages, Crates, and Modules | 20    | ?????     |
 |        | CH08:  Common Collections                                           | 11    |           |

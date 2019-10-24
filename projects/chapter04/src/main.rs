@@ -13,6 +13,7 @@ fn listing_4_2() {
 
     takes_ownership(s); // s's value moves into the function...
     // ... and so is no longer valid here
+    // println!("s: {}", s);
 
     let x = 5; // x comes into scope
 
