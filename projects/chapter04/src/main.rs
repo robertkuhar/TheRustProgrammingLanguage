@@ -10,6 +10,7 @@ fn main() {
 fn listing_4_2() {
     println!("begin listing_4_2");
     let s = String::from("hello");  // s comes into scope
+    println!("s.len() produces {}, s.capacity() produces {}", s.len(), s.capacity());
 
     takes_ownership(s); // s's value moves into the function...
     // ... and so is no longer valid here
