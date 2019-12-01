@@ -4,7 +4,7 @@ WingDing Autumn 2019
 
 https://doc.rust-lang.org/book/
 
-## Tentative Schedule
+## Schedule
 
 | Date   | Topic(s)                                                            | Pages | Moderator |
 |--------|---------------------------------------------------------------------|-------|-----------|
