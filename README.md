@@ -18,8 +18,8 @@ https://doc.rust-lang.org/book/
 | Dec 11 | CH06:  Enums and Pattern Matching                                   | 14    | Chris     |
 |        | CH07:  Managing Growing Projects with Packages, Crates, and Modules | 20    | BobK      |
 | Dec 25 |        Christmas                                                    |       |           |
-| Jan 08 | CH08:  Common Collections                                           | 11    |           |
-|        | CH09:  Error Handling                                               | 19    |           |
+| Jan 08 | CH08:  Common Collections                                           | 11    | ?????     |
+|        | CH09:  Error Handling                                               | 19    | ?????     |
 | Jan 22 | CH10:  Generic Types, Traits, and Lifetimes                         | 39    | ?????     |
 | Feb 12 | CH11:  Writing Automated Tests                                      | 30    | ?????     |
 | Feb 26 | CH12:  An I/O Project:  Building a Command Line Program             | 33    | ?????     |
