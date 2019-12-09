@@ -16,7 +16,7 @@ https://doc.rust-lang.org/book/
 |        | CH05:  Using Structs to Structure Related Data                      | 16    | Beau      |
 | Nov 27 |        Thanksgiving                                                 |       |           |
 | Dec 11 | CH06:  Enums and Pattern Matching                                   | 14    | Chris     |
-|        | CH07:  Managing Growing Projects with Packages, Crates, and Modules | 20    | ?????     |
+|        | CH07:  Managing Growing Projects with Packages, Crates, and Modules | 20    | BobK      |
 | Dec 25 |        Christmas                                                    |       |           |
 | Jan 08 | CH08:  Common Collections                                           | 11    |           |
 |        | CH09:  Error Handling                                               | 19    |           |
