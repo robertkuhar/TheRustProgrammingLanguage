@@ -6,27 +6,17 @@ mod tests {
     }
 }
 
-mod front_of_house {
-    pub(crate) mod hosting {
-        pub(crate) fn add_to_waitlist() {}
+mod front_of_house;
 
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-
-        fn serve_order() {}
-
-        fn take_payment() {}
-    }
-}
+pub use crate::front_of_house::hosting;
 
 pub fn eat_at_restaurant() {
     // Absolute path
     crate::front_of_house::hosting::add_to_waitlist();
     // Relative path
     front_of_house::hosting::add_to_waitlist();
+    // Listing 7-21: front_of_house.rs is its own file
+    hosting::add_to_waitlist();
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
