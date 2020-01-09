@@ -18,11 +18,11 @@ https://doc.rust-lang.org/book/
 | Dec 11 | CH06:  Enums and Pattern Matching                                   | 14    | Chris     |
 | Dec 25 |        Christmas                                                    |       |           |
 | Jan 08 | CH07:  Managing Growing Projects with Packages, Crates, and Modules | 20    | BobK      |
-| Jan 22 | CH08:  Common Collections                                           | 11    | ?????     |
-|        | CH09:  Error Handling                                               | 19    | ?????     |
-| Feb 12 | CH10:  Generic Types, Traits, and Lifetimes                         | 39    | ?????     |
-| Feb 26 | CH11:  Writing Automated Tests                                      | 30    | ?????     |
-| Mar 11 | CH12:  An I/O Project:  Building a Command Line Program             | 33    | ?????     |
+| Jan 22 | CH08:  Common Collections                                           | 11    | Linus     |
+|        | CH09:  Error Handling                                               | 19    | Linus     |
+| Feb 12 | CH10:  Generic Types, Traits, and Lifetimes                         | 39    | Beau      |
+| Feb 26 | CH11:  Writing Automated Tests                                      | 30    | Miene     |
+| Mar 11 | CH12:  An I/O Project:  Building a Command Line Program             | 33    | StanD     |
 | Mar 25 | CH13:  Functional Language Features:  Iterators and Closures        | 29    | ?????     |
 | Apr 08 | CH14:  More about Cargo and Crates.io                               | 22    | ?????     |
 | Apr 22 | CH15:  Smart Pointers                                               | 40    | ?????     |

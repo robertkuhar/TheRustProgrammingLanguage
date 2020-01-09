@@ -6,6 +6,7 @@ mod front_of_house;
 pub use crate::front_of_house::hosting;
 
 pub use crate::front_of_house::serving;
+use crate::front_of_house::hosting::add_to_waitlist;
 
 mod back_of_house {
     fn fix_incorrect_order() {
@@ -30,6 +31,16 @@ mod back_of_house {
         }
     }
 
+    impl Breakfast {
+        // Listing 7-9: This pub fn is required because the Breakfast struct has a non-public element
+        pub fn winter(toast: &str) -> Breakfast {
+            Breakfast {
+                toast: String::from(toast),
+                seasonal_fruit: String::from("apple"),
+            }
+        }
+    }
+
     pub enum Appetizer {
         Soup,
         Salad,
@@ -45,6 +56,7 @@ pub fn eat_at_restaurant() {
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
+    let mut anotherMeal = back_of_house::Breakfast::winter("Sourdough");
     // Change our mind about what bread we'd like
     meal.toast = String::from("Wheat");
     println!("I'd like {} toast please", meal.toast);
