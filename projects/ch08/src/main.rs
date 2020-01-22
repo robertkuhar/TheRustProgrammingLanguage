@@ -1,5 +1,6 @@
 fn main() {
     check_your_vector_victor();
+    string_theory();
 }
 
 #[derive(Debug)]
@@ -60,4 +61,27 @@ fn check_your_vector_victor() {
     ];
     // I had to #[derive(Debug)] on SpreadsheetCell to get this to work
     println!("{:?}", row);
+}
+
+fn string_theory() {
+    let mut hello = String::from("hello");
+    hello.push_str(", Olá");
+    hello.push_str(", Γειά σου");
+    println!("hello: {}", hello);
+
+    let hello_scottish_galic = String::from("Halò");
+    hello.push_str(", ");
+    hello.push_str(&hello_scottish_galic);
+    println!("hello: {}, hello_scottish_galic: {}", hello, hello_scottish_galic);
+
+    let hello_icelandic = "Halló";
+    hello.push_str(", ");
+    hello.push_str(hello_icelandic);
+    println!("hello: {}", hello);
+
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+    let s = format!("{}-{}-{}", s1, s2, s3);
+    println!("s: {}, s1: {}, s2: {}, s3: {}", s, s1, s2, s3);
 }
