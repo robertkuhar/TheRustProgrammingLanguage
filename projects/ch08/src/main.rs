@@ -1,6 +1,7 @@
 fn main() {
     check_your_vector_victor();
     string_theory();
+    na_na_na_na_na_na_na_na_hash_map();
 }
 
 #[derive(Debug)]
@@ -85,3 +86,64 @@ fn string_theory() {
     let s = format!("{}-{}-{}", s1, s2, s3);
     println!("s: {}, s1: {}, s2: {}, s3: {}", s, s1, s2, s3);
 }
+
+use std::collections::HashMap;
+
+fn na_na_na_na_na_na_na_na_hash_map() {
+    let mut scores_1 = HashMap::new();
+    scores_1.insert(String::from("Blue"), 10);
+    scores_1.insert(String::from("Yellow"), 50);
+
+    let teams = vec![String::from("Blue"), String::from("Yellow")];
+    let initial_scores = vec![10, 50];
+    let scores_2: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
+
+    let team_name = String::from("Blue");
+    let blue_score_1 = scores_1.get(&team_name);
+    let blue_score_2 = scores_2.get(&team_name);
+    let blue_score_3 = scores_2.get(&String::from("steelers"));
+
+    println!("blue_score_1: {:?}, blue_score_2: {:?}", blue_score_1, blue_score_2);
+    // How do I println! None in rust
+    match blue_score_3 {
+        Some(p) => println!("blue_score_3: {}", p),
+        None => println!("blue_score_3 is None"),
+    }
+
+    println!("Before");
+    for (key, value) in &scores_1 {
+        println!("\tscores_1.get({}): {}", key, value);
+    }
+    scores_1.insert(String::from("Blue"), 25);
+    println!("Blue to 25");
+    for (key, value) in &scores_1 {
+        println!("\tscores_1.get({}): {}", key, value);
+    }
+
+    println!("Blue gets 50 if it isn't already in map.\n5 Points to Gryffindor.");
+    scores_1.entry(String::from("Gryffindor")).or_insert(5);
+    scores_1.entry(String::from("Blue")).or_insert(50);
+    for (key, value) in &scores_1 {
+        println!("\tscores_1.get({}): {}", key, value);
+    }
+    println!("scores_1: {:?}", scores_1);
+    let text = "hello world wonderful world";
+    println!("word_distribution({}) -> {:?}", text, find_word_distribution(text));
+}
+
+fn find_word_distribution(text: &str) -> HashMap<&str,i32> {
+    let mut map = HashMap::new();
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+    return map;
+}
+
+/* I can't write this function.  The fuck?
+fn dump_map(format_str: String, hash_map: &HashMap<String,i32>) {
+    for (key, value) in &hash_map {
+        println!(format_str, key, value);
+    }
+}
+*/
