@@ -22,19 +22,21 @@ fn check_your_vector_victor() {
     v0.remove(0);
     println!("v0: {:?}", v0);
 
+    /*
+     * SO shows how to mutate that 3rd guy:  https://stackoverflow.com/questions/57449264/how-to-get-replace-a-value-in-rust-vec
+     * but it seems there is an easier way
+     */
+    let value_at_index_0 = &mut v0[0];
+    *value_at_index_0 = 4;
+    println!("v0: {:?}", v0);
+
     let v8_dash_5 = vec![1, 2, 3, 4, 5];
     println!("v8_dash_5: {:?}", v8_dash_5);
 
     let third_i = v8_dash_5[2];
     let third_ref_i: &i32 = &v8_dash_5[2];
-    println!("third_i: {}, third_ref_i: {}", third_i, third_ref_i);
-    /*
-     * SO shows how to mutate that 3rd guy:  https://stackoverflow.com/questions/57449264/how-to-get-replace-a-value-in-rust-vec
-     * Hmmm.  Somehow my third_ref_i example made my mutable thing immutable?
-     */
-    // std::mem::replace(&mut v8_dash_5[2], 33);
-    // println!("third_i: {}, third_ref_i: {}, v8_dash_5: {:?}", third_i, third_ref_i, v8_dash_5);
 
+    println!("third_i: {}, third_ref_i: {}", third_i, third_ref_i);
     match v8_dash_5.get(2) {
         Some(third) => println!("The third element is {}", third),
         None => println!("There is no third element."),
@@ -62,6 +64,13 @@ fn check_your_vector_victor() {
     ];
     // I had to #[derive(Debug)] on SpreadsheetCell to get this to work
     println!("{:?}", row);
+    for cell in row {
+        match cell {
+            SpreadsheetCell::Int(x_int) => println!("x_int is {}", x_int),
+            SpreadsheetCell::Text(x_text) => println!("x_text is {}", x_text),
+            SpreadsheetCell::Float(x_float) => println!("x_float is {}", x_float)
+        }
+    }
 }
 
 fn string_theory() {
@@ -121,17 +130,22 @@ fn na_na_na_na_na_na_na_na_hash_map() {
     }
 
     println!("Blue gets 50 if it isn't already in map.\n5 Points to Gryffindor.");
-    scores_1.entry(String::from("Gryffindor")).or_insert(5);
     scores_1.entry(String::from("Blue")).or_insert(50);
+    let gryffindor = scores_1
+        .entry(String::from("Gryffindor"))
+        .or_insert(5);
+
+    println!("5 Points to Gryffindor.");
+    *gryffindor += 5;
+
     for (key, value) in &scores_1 {
         println!("\tscores_1.get({}): {}", key, value);
     }
-    println!("scores_1: {:?}", scores_1);
     let text = "hello world wonderful world";
     println!("word_distribution({}) -> {:?}", text, find_word_distribution(text));
 }
 
-fn find_word_distribution(text: &str) -> HashMap<&str,i32> {
+fn find_word_distribution(text: &str) -> HashMap<&str, i32> {
     let mut map = HashMap::new();
     for word in text.split_whitespace() {
         let count = map.entry(word).or_insert(0);
