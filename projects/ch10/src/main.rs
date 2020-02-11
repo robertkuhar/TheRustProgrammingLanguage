@@ -90,6 +90,10 @@ impl Summary for Tweet {
     }
 }
 
+fn notify(item: &impl Summary) {
+    println!("Breaking news! {}", item.summarize());
+}
+
 fn main() {
     let first_list = vec![34, 50, 25, 100, 65];
     println!(
@@ -126,7 +130,6 @@ fn main() {
         reply: false,
         retweet: false,
     };
-    println!("1 new tweet: {}", tweet.summarize());
 
     let article = NewsArticle {
         headline: String::from("Penguins win the Stanley Cup Championship!"),
@@ -135,5 +138,9 @@ fn main() {
         content: String::from("The Pittsburgh Penguins once again are the best
     hockey team in the NHL."),
     };
+
+    notify(&tweet);
+    notify(&article);
+    println!("1 new tweet: {}", tweet.summarize());
     println!("New article available! {}", article.summarize());
 }
